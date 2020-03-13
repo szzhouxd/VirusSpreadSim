@@ -108,7 +108,7 @@ class Quadtree
 					}
 					else
 					{
-						it++;
+						++it;
 					}
 				}
 			}
@@ -315,7 +315,7 @@ int main(int argc, char *argv[])
 			if (crowd[i].state < 3)
 			{
 				colld = root.retrieve(&crowd[i]);
-				for (j = colld.begin(); j != colld.end(); j++)
+				for (j = colld.begin(); j != colld.end(); ++j)
 				{
 					if (crowd[i].y + BODYSIZE > (*j)->y && crowd[i].y < (*j)->y + BODYSIZE && crowd[i].x + BODYSIZE > (*j)->x && crowd[i].x < (*j)->x + BODYSIZE)
 					{
